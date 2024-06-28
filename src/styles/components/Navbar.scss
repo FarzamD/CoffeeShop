@@ -1,0 +1,66 @@
+@import '../base/settings';
+.Navbar{
+  display: flex;
+  background-color: $bezhe;
+  justify-content: flex-end;
+  height: fit-content;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  // padding: 0 10px 20px 40px;
+}
+//.dropdown & Navlink 
+.nav-item{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+// display: inline-block;
+// position: relative; /* Set position to relative */
+div.dropdown{
+  list-style-type: none;/*remove bullet marker*/
+
+  border-radius: 7px;
+  display: inline-block;//gpt code
+  position: relative; /* gpt code,Set position to relative */
+  // max-width: 100px;
+}
+//.dropdown-menu
+div.dropdown-content{
+  background-color: $bezhe;
+  width: auto;
+  border-radius: 0 0 20px 20px;
+  //gpt code:
+  position: absolute; /* Set dropdown menu position to absolute */
+  top: 100%; /* Position dropdown menu below navbar */
+  left: 0;
+  // background-color: #333; /* Set dropdown menu background color */
+  padding: 10px;
+  // display: none; /* Hide dropdown menu by default */
+  display: flex; /* Display dropdown menu on hover */
+  flex-direction: column;
+}
+//gpt code:
+.dropdown:focus .dropdown-content {
+  display: flex; /* Display dropdown menu on hover */
+  flex-direction: column;
+}
+
+.Navbar--links{
+  margin: 0px 5px;
+  border-bottom: 1px solid lighten($light-blue, 10%);
+  padding: $s-size $m-size;
+  align-content: center;
+}
+.dropdown-content .Navbar--links:last-child{
+  border: none;
+}
+// searchbar
+.searchbar__navbar{
+  width: auto;
+}
+// .search__navbar{
+//   width: 100px;
+// }
+
+

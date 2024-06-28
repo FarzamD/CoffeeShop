@@ -1,0 +1,60 @@
+//Footer
+// Background color: Light gray or off-white (#f5f5f5 or #f8f8f8)
+// Text color: Dark gray (#333333) for normal text, possibly black (#000000) for headings
+// Accent color: You can use the school's official colors or a complementary color to create visual interest. For example, if the school's colors are blue and yellow, you could use a muted shade of blue (#007acc) for links or highlights.
+// These colors provide a clean and professional look while ensuring good contrast for readability. Feel free to adjust them based on your preferences and the overall design of the website.
+$bcg:rgb(36, 38, 43);
+.Footer{
+    background-color: $bcg;
+    margin-top: auto;
+    bottom: 50px;
+}
+
+.Footing{
+    // background-color: cornsilk;
+    background-color: $bcg;
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+}
+.Footing h2 a{
+    text-decoration: none;
+    color: inherit;
+}
+.Footing h2{
+    position: relative;
+}
+.Footing h2:before{
+	content: '';
+	position:absolute ;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.QuickAccess{
+    display: flex;
+    flex-direction: column;
+}
+.RelatedLinks{
+    display: flex;
+    flex-direction: column;
+}
+.footer-link{
+    margin: 7px;
+}
+
+.footer-section{
+    background-color: rgba(20, 20, 22, 0.171);
+    color: $off-white;
+    margin: 10px 0;
+    padding: 0 20px;
+    border-radius: 20px;
+    min-width: 120px;
+}
+.Devs{
+    background-color: $off-white;
+    padding: 0.05rem 1rem;
+}

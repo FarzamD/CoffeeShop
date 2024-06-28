@@ -1,0 +1,70 @@
+@import '../base/settings';
+.profile-panels-section{
+    // display: grid;
+    // grid-template-columns: repeat(2,1fr) auto;
+    display: flex;
+    flex-flow: row wrap;
+    // justify-content: space-between;
+    // justify-content: space-around;
+    // flex-wrap:wrap;
+}
+.profile-panel{
+    background-color: $off-white;
+    // width: 33rem;
+    min-width: 36rem;
+    max-width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.faculty-personal-page{
+    margin-left:2rem;
+}
+.faculty-image{
+    border-radius: .5rem;
+}
+.faculty-info{
+    display: flex;
+    justify-content: space-between;
+    // direction: rtl;
+}
+.faculty-text-info{
+    direction: rtl;
+}
+.faculty-image{
+    min-width: 13rem;
+    max-width: 15.5rem;
+    // margin-right: 5rem;
+}
+.faculty-name{
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid;
+    border-color: lighten($off-black, 65%);
+    font-size:x-large;
+    font-family: 'iran-sans';
+}
+.faculty-contact-info{
+    text-align: center;
+}
+.faculty-title{
+    width: fit-content;
+    margin-top: 0rem;
+    color: lighten($off-black, 30%);
+}
+.faculty-office-Hours-title{
+    margin-bottom: .75rem;
+    margin-top: 3rem;
+}
+.faculty-office-Hours{
+    margin-top: 0px;
+}
+.faculty-farsi-info{
+    direction: rtl;
+}
+.item-amount{
+    display: flex;    
+}
+.item-amount p{
+    margin: 0 1.5rem 0 1.5rem;
+}

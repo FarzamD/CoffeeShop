@@ -1,0 +1,21 @@
+@import './base/base';
+@import './base/settings';
+@import './components/Navbar';
+@import './components/Footer.scss';
+@import './components/Panel.scss';
+//main
+html, body{
+    height: 100%;
+    margin: 0px;
+    bottom: 0px;
+}
+
+div.page__body{
+    min-height: 700px;
+    // padding: 2rem;
+    // color: $off-white;
+}
+.button{
+    border-radius: 7px;
+    border-color: rgba(255, 255, 255, 0.219);
+}
