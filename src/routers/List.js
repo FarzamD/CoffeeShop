@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import ItemPanel from '../components/ItemPanel';
 import { deleteShoppingList } from '../components/redux/actions/list';
 import { addList } from '../components/redux/actions/orders';
+import { buyItems } from '../components/redux/actions/buyItems';
 
 //base component
 const ShoppingList= (props)=> {
@@ -23,7 +24,9 @@ const ShoppingList= (props)=> {
     // }, [storeOrders])
 
     const buy=()=>{
+        // dispatch(buyItems(storeList))
         dispatch(addList(storeList))
+        // dispatch(deleteShoppingList()) 
     }
     return (
     <Page>
