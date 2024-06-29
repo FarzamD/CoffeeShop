@@ -3,6 +3,7 @@
     "serve": "live-server public/",
     "build-watch": "webpack --watch",
     "build": "webpack",
+    "dev-server": "webpack-dev-server",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "dependencies": {

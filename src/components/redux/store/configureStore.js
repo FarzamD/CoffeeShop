@@ -1,6 +1,8 @@
 import { createStore, combineReducers } from 'redux';
 import facultyReducer from '../reducers/faculties';
 import itemReducer from '../reducers/Items';
+import listReducer from '../reducers/list';
+import ordersReducer from '../reducers/orders';
 
 // import filtersReducer from '../reducers/filters';
 
@@ -9,6 +11,8 @@ export default () => {
     combineReducers({
       faculties: facultyReducer,
       items : itemReducer,
+      list: listReducer,
+      orders: ordersReducer
       // ,
       // filters: filtersReducer
     }),

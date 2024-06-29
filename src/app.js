@@ -81,8 +81,8 @@ const emails2=[
 ]
 
 const store= configureStore();
-console.log(store.getState().items)
-store.getState().items.map(({type})=>{console.log(type==='cold drink')})
+// console.log(store.getState().items)
+// store.getState().items.map(({type})=>{console.log(type==='cold drink')})
 // console.log(
     names.map((name,i)=>{
         let f={name:name, email1:emails1[i], email2:emails2[i],

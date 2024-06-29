@@ -39,6 +39,7 @@ div.dropdown-content{
   // display: none; /* Hide dropdown menu by default */
   display: flex; /* Display dropdown menu on hover */
   flex-direction: column;
+  z-index: 2;
 }
 //gpt code:
 .dropdown:focus .dropdown-content {

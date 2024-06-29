@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Page from '../components/Pages';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Items from './Items old';
 import ItemPanel from '../components/ItemPanel';
 import { useSelector } from 'react-redux';
 import ColdDrinks from './ColdDrinks';
@@ -12,6 +11,8 @@ import Cakes from './Cakes';
 import FastFoods from './FastFoods';
 import Sandwiches from './Sandwiches';
 import Home from './Home';
+import ShoppingList from './List';
+import Orders from './Orders';
 // import { connect } from 'react-redux';
 
 //base component
@@ -37,6 +38,8 @@ const Routers=()=> (
             <Route path="/fast-foods" element={<FastFoods/>} exact/>
             <Route path="/sandwiches" element={<Sandwiches/>} exact/>
             
+            <Route path="/list" element={<ShoppingList/>} exact/>
+            <Route path="/orders" element={<Orders/>} exact/>
             {/* <Route path='*' element={<NotFound404/>}/> */}
             <Route path='*' element={<Home />}/>
         </Routes>

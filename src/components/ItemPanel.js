@@ -1,16 +1,35 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Amount from './Panel/Amount';
+import { addItem2L, editItem2L, removeItem2L } from './redux/actions/list';
 
 const ItemPanel = (props)=>{
-    const {img, name, description} = props.item;
+    const {img, name, description, id} = props.item;
+    const dispatch = useDispatch()
     const [amount, setAmount ]= useState(0);
+    const storeList= useSelector(state=>state.list)
+    const [list, setList]= useState(storeList)
+    useEffect(() => {
+        const item= storeList.filter(litem=> litem.id===id)[0]
+        const newAmount= item? item.amount: 0 
+        setAmount(newAmount)
+    }, [])
     const chAmount=(val)=>{
-        setAmount(amount+val)
-        console.log(amount)
+        if (amount+val===0) {
+            setAmount(0)
+            dispatch(removeItem2L(id))
+        } else {
+            const newAmount=amount+val
+            dispatch(editItem2L(id,{amount:newAmount}))
+            setAmount(newAmount)
+        }
     }
     const addItem2List=()=>{
         setAmount(1)
-        console.log('addItem2List')
+        dispatch(addItem2L(id))
+    }
+    const add2List=()=>{
+        const item= storeList.filter(litem=> litem.id===id)[0]
     }
     return (
     <div className='profile-panel'>
@@ -24,7 +43,7 @@ const ItemPanel = (props)=>{
             <p>{description}</p>
             <p>{props.item.type}</p>
             <Amount chAmount={amount?chAmount:addItem2List} amount={amount}/>
-            <button onClick={()=>{console.log(JSON.stringify(props.item))}} >add to shopping list</button>
+            <button onClick={add2List} >add to shopping list</button>
         </div>
         {/* <div className='faculty-farsi-info' >
             <a className='faculty-personal-page' href={props.personalPage1}>صفحه شخصی</a>

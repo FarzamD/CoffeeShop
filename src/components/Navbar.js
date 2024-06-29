@@ -26,9 +26,9 @@ export default class Navigation extends React.Component {
         {this.Dropdowns.map((dropdown, index) => (
           <Dropdown title={dropdown.title} links={dropdown.links} hrefs={dropdown.href} key={index} />))
         }
-        <NavLink to='/Events'>orders</NavLink>
-        <NavLink to='/blog'>shoping list</NavLink>
-        <NavLink to='#contact'>login</NavLink>
+        <NavLink to='/orders'>orders</NavLink>
+        <NavLink to='/list'>shoping list</NavLink>
+        <NavLink to='/login'>login</NavLink>
       </ul>
     </nav>
     );

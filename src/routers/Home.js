@@ -7,6 +7,9 @@ import Slider from '../components/Slider';
 //base component
 const Home= (props)=> {
     const storeItems= useSelector(state=>state.items)
+    useEffect(() => {
+        console.log('storeItems',storeItems.length)
+    }, [storeItems])
     const items= storeItems.sort((a,b)=>a.amountSold-b.amountSold).slice(0, 12)
     return (
     <Page>

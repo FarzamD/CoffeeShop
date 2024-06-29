@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Nava=(props)=>(
     <NavLink to={props.to}
-    activeClassName="is-active"
-    exact={props.exact}
+    exact={JSON.stringify(props.exact)}
     className={props.className}>
         {props.children}
     </NavLink>
