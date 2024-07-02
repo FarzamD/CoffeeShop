@@ -3,14 +3,16 @@ import Page from '../components/Pages';
 import { useSelector } from 'react-redux';
 import ItemPanel from '../components/ItemPanel';
 import Slider from '../components/Slider';
-
+const sortFunc=(a,b)=>(
+    a.amountSold - b.amountSold
+);
+const filterState=(state)=>{
+    const storeItems= state.items;
+    return storeItems.sort(sortFunc).slice(0, 12)
+}
 //base component
 const Home= (props)=> {
-    const storeItems= useSelector(state=>state.items)
-    useEffect(() => {
-        console.log('storeItems',storeItems.length)
-    }, [storeItems])
-    const items= storeItems.sort((a,b)=>a.amountSold-b.amountSold).slice(0, 12)
+    const items= useSelector(filterState)     
     return (
     <Page>
         <Slider/>

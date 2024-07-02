@@ -5,23 +5,17 @@ import ItemPanel from '../components/ItemPanel';
 import { deleteShoppingList } from '../components/redux/actions/list';
 import { addList } from '../components/redux/actions/orders';
 import { buyItems } from '../components/redux/actions/buyItems';
-
 //base component
 const ShoppingList= (props)=> {
     const storeItems= useSelector(state=>state.items)
-    const storeOrders= useSelector(state=>state.orders)
-    const storeList= useSelector(state=>state.list)
-    const dispatch = useDispatch()
-    const [items, setitems] = useState([])
-    useEffect(() => {
-        const IDs= storeList.map(({id})=>(id))
+    const filterState=(state)=>{
+        const storeList= state.list;
+        const IDs= storeList.map(({id})=>(id));
         const items=storeItems.filter(item=> IDs.includes(item.id));
-        setitems(items)
-    }, [storeList])
-
-    // useEffect(() => {
-    //     dispatch(deleteShoppingList())        
-    // }, [storeOrders])
+        return items
+    }
+    const items= useSelector(filterState)
+    const dispatch = useDispatch()
 
     const buy=()=>{
         // dispatch(buyItems(storeList))

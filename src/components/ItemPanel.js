@@ -32,7 +32,7 @@ const ItemPanel = (props)=>{
         dispatch(addItem2L(id))
     }
     const debug=()=>{
-        const item= storeList.filter(litem=> litem.id===id)[0]
+        
     }
     return (
     <div className='profile-panel'>
