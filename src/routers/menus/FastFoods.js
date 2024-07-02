@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
-import Page from '../components/Pages';
 import { useSelector } from 'react-redux';
-import ItemPanel from '../components/ItemPanel';
+import ItemPanel from '../../components/ItemPanel';
+import Page from '../../components/Pages';
 
 //base component
-const Sandwiches= (props)=> {
+const FastFoods= (props)=> {
     const items= useSelector(state=>state.items)
-    const sandwiches= items.filter(({type})=> type==='sandwich')
+    const fast_foods= items.filter(({type})=> type==='fast food')
     return (
     <Page>
         <div className='profile-panels-section'>
-            {sandwiches.map( (item, index)=>
+            {fast_foods.map( (item, index)=>
                 <ItemPanel key={index} item={item}/>
             )}
         </div>
     </Page>
 )};
 
-export default Sandwiches;
+export default FastFoods;
