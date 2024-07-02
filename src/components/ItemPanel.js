@@ -5,15 +5,18 @@ import { addItem2L, editItem2L, removeItem2L } from './redux/actions/list';
 
 const ItemPanel = (props)=>{
     const {img, name, description, id} = props.item;
+    const filterStateList=(state)=>{
+        const storeList= state.list
+        const item= storeList.find(litem=> litem.id===id)
+        return item
+    }
     const dispatch = useDispatch()
     const [amount, setAmount ]= useState(0);
-    const storeList= useSelector(state=>state.list)
-    const [list, setList]= useState(storeList)
+    const item= useSelector(filterStateList)
     useEffect(() => {
-        const item= storeList.filter(litem=> litem.id===id)[0]
         const newAmount= item? item.amount: 0 
         setAmount(newAmount)
-    }, [])
+    }, [item])
     const chAmount=(val)=>{
         if (amount+val===0) {
             setAmount(0)
