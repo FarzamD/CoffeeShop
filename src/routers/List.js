@@ -12,9 +12,9 @@ const ShoppingList= (props)=> {
         const storeList= state.list;
         const IDs= storeList.map(({id})=>(id));
         const items=storeItems.filter(item=> IDs.includes(item.id));
-        return items
+        return [storeList, items]
     }
-    const items= useSelector(filterState)
+    const [storeList, items]= useSelector(filterState)
     const dispatch = useDispatch()
 
     const buy=()=>{
