@@ -33,7 +33,7 @@ const sandwich_names=[
 ]
 const sandwich_imgs=[
     'sandwich', 'burger', 'burger',
-    , 'burger', 'burger'
+    'burger', 'burger'
 ]
 export const drinks= drink_names.map((name)=>
     ({name, type:'drink', img:`/imgs/drinks/${name}.jpg`, amountSold:0, id:uuid()})
