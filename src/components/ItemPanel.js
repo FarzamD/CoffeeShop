@@ -31,7 +31,7 @@ const ItemPanel = (props)=>{
         setAmount(1)
         dispatch(addItem2L(id))
     }
-    const add2List=()=>{
+    const debug=()=>{
         const item= storeList.filter(litem=> litem.id===id)[0]
     }
     return (
@@ -46,7 +46,7 @@ const ItemPanel = (props)=>{
             <p>{description}</p>
             <p>{props.item.type}</p>
             <Amount chAmount={amount?chAmount:addItem2List} amount={amount}/>
-            <button onClick={add2List} >add to shopping list</button>
+            <button onClick={debug} >debug</button>
         </div>
         {/* <div className='faculty-farsi-info' >
             <a className='faculty-personal-page' href={props.personalPage1}>صفحه شخصی</a>
