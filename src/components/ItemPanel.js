@@ -32,7 +32,7 @@ const ItemPanel = (props)=>{
         dispatch(addItem2L(id))
     }
     const debug=()=>{
-        
+        console.log(props.item)
     }
     return (
     <div className='profile-panel'>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import ItemPanel from '../components/ItemPanel';
 import Slider from '../components/Slider';
 const sortFunc=(a,b)=>(
-    a.amountSold - b.amountSold
+    b.amountSold - a.amountSold
 );
 const filterState=(state)=>{
     const storeItems= state.items;
